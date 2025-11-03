@@ -1,0 +1,150 @@
+/* 🌞 Default Light Mode — nothing special needed */
+
+/* 🌙 Dark Mode Overrides */
+body.dark-mode {
+  background-color: #363639 !important; /* slightly dark body */
+  color: #f1f1f1 !important;
+}
+
+/* ==================== CONTAINER ==================== */
+body.dark-mode .data-container,
+body.dark-mode .bg-light {
+  background-color: #333335 !important; /* darker than body */
+  color: #f1f1f1 !important;
+  border-color: #333 !important;
+}
+body.dark-mode .black-sidebar {
+  background-color: #000 !important; /* darker than body */
+  color: #f1f1f1 !important;
+  border-color: #bbb !important;
+}
+
+/* ==================== TABLE ==================== */
+body.dark-mode table {
+  background-color: #1f1f1f !important;
+  color: #f1f1f1 !important;
+  border-color: #333 !important;
+}
+
+/* Table header */
+body.dark-mode table thead,
+body.dark-mode .table thead,
+body.dark-mode .table-primary th {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+  border-color: #444 !important;
+}
+
+/* Table body rows */
+body.dark-mode table tbody tr,
+body.dark-mode table tbody tr td,
+body.dark-mode table tbody tr th {
+  background-color: #232323 !important;
+  color: #f1f1f1 !important;
+  border-color: #444 !important;
+}
+
+/* Alternating rows for table-striped */
+body.dark-mode table.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode table.table-hover tbody tr:hover {
+  background-color: #333 !important;
+}
+
+/* Fix Bootstrap .bg-light inside table rows or cells */
+body.dark-mode table tr.bg-light,
+body.dark-mode table td.bg-light,
+body.dark-mode table th.bg-light {
+  background-color: #232323 !important;
+  color: #f1f1f1 !important;
+}
+
+/* ==================== CARDS, MODALS ==================== */
+body.dark-mode .card,
+body.dark-mode .modal-content {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+  border-color: #333 !important;
+}
+
+/* ==================== BUTTONS ==================== */
+body.dark-mode .btn {
+  border-color: #666 !important;
+}
+
+/* ==================== LINKS ==================== */
+body.dark-mode a {
+  color: #f1f1f1 !important;
+}
+body.dark-mode strong {
+  color: #f1f1f1;
+}
+body.dark-mode .dropdown-menu {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+}
+body.dark-mode .dropdown-item:hover {
+  background-color: #000 !important;
+  color: #ffff !important;
+}
+
+body.dark-mode .fa-search {
+  color: #000 !important;
+}
+
+/* ==================== INPUT FIELDS ==================== */
+body.dark-mode .form-control,
+body.dark-mode .form-select,
+body.dark-mode .right-card {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #fff !important;
+}
+body.dark-mode small {
+  color: #bbb !important;
+}
+body.dark-mode .right-card {
+  background-color: #1f1f1f !important;
+  color: #f1f1f1 !important;
+  border: #666;
+}
+body.dark-mode .table-section {
+  background-color: #242424 !important;
+}
+body.dark-mode .stat-card {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #bbb !important;
+}
+
+/* ==================== SWEETALERT2 ==================== */
+body.dark-mode .swal2-popup {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+body.dark-mode .swal2-title,
+body.dark-mode .swal2-html-container {
+  color: #ffffff !important;
+}
+
+body.dark-mode .swal2-confirm {
+  background-color: #7d53f3 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+body.dark-mode .swal2-cancel {
+  background-color: #555 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .swal2-icon {
+  border-color: #7d53f3 !important;
+  color: #7d53f3 !important;
+}
