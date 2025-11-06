@@ -56,7 +56,7 @@ require("common/header.php");
                 <th class="text-center">Actions</th>
               </tr>
             </thead>
-            <tbody id="tablebody"></tbody>
+            <tbody id="feesTablebody"></tbody>
           </table>
         </div>
       </div>
@@ -70,7 +70,7 @@ require("common/header.php");
     <div class="modal-content border-0 shadow-lg rounded-4">
       <div class="modal-header bg-purpal text-white">
         <h5 class="modal-title" id="addFeeModalLabel">
-          <i class="fa-solid fa-circle-plus me-2"></i> Add / Update Fee
+          <i class="fa-solid fa-circle-plus me-2"></i> <span id="feesLableText">Add / Update Fee</span>
         </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>

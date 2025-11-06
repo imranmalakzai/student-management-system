@@ -115,6 +115,19 @@ switch ($method) {
     break;
 
   // ---------------- DEFAULT ----------------
+  case "CLASS_STUDENTS":
+    if (isset($_POST["class_id"])) {
+      $class_id = intval($_POST["class_id"]);
+      $query = "SELECT * FROM students WHERE class_id = $class_id";
+      $result = $conn->query($query);
+      $students = $result->fetch_all(MYSQLI_ASSOC);
+      if ($username) {
+        echo json_encode($students);
+      } else {
+        echo json_encode(["message" => "unable to fetch students records"]);
+      }
+    }
+    break;
   default:
     echo json_encode(["message" => "Invalid request method"]);
     break;

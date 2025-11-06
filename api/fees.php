@@ -9,8 +9,53 @@ switch ($method) {
   case "GET":
     if (isset($_GET["fee_id"])) {
       $fee_id = intval($_GET["fee_id"]);
-      $query = "SELECT * FROM fees WHERE fee_id = $fee_id";
+      $query = "SELECT 
+                f.fee_id,
+                f.student_id,
+                f.class_id,
+                f.total_amount,
+                f.amount_paid,
+                f.due_amount,
+                f.payment_status,
+                f.last_payment_date,
+                f.notes,
+                s.first_name AS student_first_name,
+                s.last_name AS student_last_name,
+                c.name AS class_name
+              FROM fees f
+              LEFT JOIN students s ON f.student_id = s.student_id
+              LEFT JOIN classes c ON f.class_id = c.class_id
+              WHERE f.fee_id = $fee_id";
       $result = $conn->query($query);
+      $fees = $result->fetch_assoc();
+      echo json_encode($fees ? $fees : ["message" => "No Fees Record Exist"]);
+    } else {
+      $query = "SELECT 
+                f.fee_id,
+                f.student_id,
+                f.class_id,
+                f.total_amount,
+                f.amount_paid,
+                f.due_amount,
+                f.payment_status,
+                f.last_payment_date,
+                f.notes,
+                s.first_name AS student_first_name,
+                s.last_name AS student_last_name,
+                c.name AS class_name
+              FROM fees f
+              LEFT JOIN students s ON f.student_id = s.student_id
+              LEFT JOIN classes c ON f.class_id = c.class_id";
+      $result = $conn->query($query);
+      $fees = $result->fetch_all(MYSQLI_ASSOC);
+      echo json_encode($fees ? $fees : ["message" => "No fees Record Exists"]);
+    }
+    break;
+
+    if (isset($_GET["fee_id"])) {
+      $fee_id = intval($_GET["fee_id"]);
+      $query = "SELECT * FROM fees WHERE fee_id = $fee_id";
+      $result = $conn->query($query2);
       $fees = $result->fetch_assoc();
       if ($fees) {
         echo json_encode($fees);
@@ -32,7 +77,7 @@ switch ($method) {
     $student_id = intval($_POST["student_id"]);
     $class_id = intval($_POST["class_id"]);
     $total_amount = $_POST["total_amount"];
-    $paid_amount = $_POST["paid_amount"];
+    $paid_amount = $_POST["amount_paid"];
     $last_payment_date = $_POST["last_payment_date"];
     $notes = $_POST["notes"];
 
@@ -51,7 +96,7 @@ switch ($method) {
       $student_id = intval($_POST["student_id"]);
       $class_id = intval($_POST["class_id"]);
       $total_amount = $_POST["total_amount"];
-      $paid_amount = $_POST["paid_amount"];
+      $paid_amount = $_POST["amount_paid"];
       $last_payment_date = $_POST["last_payment_date"];
       $notes = $_POST["notes"];
 

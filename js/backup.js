@@ -1,7 +1,7 @@
 const downloadBtn = document.getElementById("download-backup-btn");
 const restoreForm = document.getElementById("backupForm");
 
-// ========== CREATE BACKUP ==========
+// ========== CREATE BACKUP ========== //
 downloadBtn.addEventListener("click", async (e) => {
   e.preventDefault();
   try {
@@ -14,19 +14,29 @@ downloadBtn.addEventListener("click", async (e) => {
     });
 
     const data = await res.json();
+
     if (data.status === "success") {
-      await showSuccess(data.message);
-      window.location.href = "index.php";
-      // waits 2 seconds, then redirects
+      showSuccess(data.message);
+
+      // Wait a bit then trigger file download
+      setTimeout(() => {
+        const link = document.createElement("a");
+        link.href = data.file; // e.g. "backups/backup_2025-11-04_12-00-00.sql"
+        link.download = data.file.split("/").pop();
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+      }, 1000);
     } else {
       showError(data.message);
     }
   } catch (err) {
     showError("❌ Error occurred while creating backup.");
+    console.error(err);
   }
 });
 
-// ========== RESTORE BACKUP ==========
+// ========== RESTORE BACKUP ========== //
 restoreForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   try {
@@ -47,5 +57,6 @@ restoreForm.addEventListener("submit", async (e) => {
     }
   } catch (err) {
     showError("❌ Error occurred while restoring database.");
+    console.error(err);
   }
 });
