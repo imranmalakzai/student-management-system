@@ -10,16 +10,17 @@ const showAllRecords = async function () {
     const tbody = document.getElementById("feesTablebody");
     tbody.innerHTML = "";
     data.forEach((fee) => {
+      const result = checker(fee.payment_status);
       let tr = document.createElement("tr");
       tr.innerHTML = `
-      <td>${fee.fee_id}</td>
-      <td>${fee.student_first_name} "${fee.student_last_name}"</td>
-      <td>${fee.class_name}</td>
-      <td>${fee.total_amount}</td>
-      <td>${fee.amount_paid}</td>
-      <td>${fee.due_amount}</td>
-      <td>${fee.payment_status}</td>
-      <td>${fee.last_payment_date}</td>
+      <td class="text-center">${fee.fee_id}</td>
+      <td class="text-center">${fee.student_first_name} "${fee.student_last_name}"</td>
+      <td class="text-center">${fee.class_name}</td>
+      <td class="text-center">${fee.total_amount}</td>
+      <td class="text-center">${fee.amount_paid}</td>
+      <td class="text-center">${fee.due_amount}</td>
+      <td class="text-center"><span class="${result}">${fee.payment_status}</span></td>
+      <td class="text-center">${fee.last_payment_date}</td>
       <td class="text-center">
        <button class="btn btn-sm btn-warning me-2 edit-btn" data-id="${fee.fee_id}">
               <i class="fa-solid fa-pen-to-square"></i>
@@ -216,5 +217,34 @@ const loadClasses = async function () {
     console.log(error);
   }
 };
+
+//============================ Search functionality ===========================//
+document
+  .getElementById("searchFee")
+  .addEventListener("input", async function () {
+    const query = this.value.toLowerCase();
+    const rows = document.querySelectorAll("#feesTablebody tr");
+    rows.forEach((element) => {
+      const targetCell = element.querySelector("td:nth-child(2)");
+      const cellText = targetCell.innerText.toLowerCase();
+      if (cellText.includes(query)) {
+        element.style.display = "";
+      } else {
+        element.style.display = "none";
+      }
+    });
+  });
+
+//=== A utility class for fees status =========//
+const checker = function (status) {
+  if (status.toLowerCase() === "paid") {
+    return "paid";
+  } else if (status.toLowerCase() === "unpaid") {
+    return "unpaid";
+  } else {
+    return "partial";
+  }
+};
+
 loadClasses();
 showAllRecords();

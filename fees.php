@@ -45,14 +45,14 @@ require("common/header.php");
           <table class="table table-hover align-middle">
             <thead class="table-primary">
               <tr>
-                <th>ID</th>
-                <th>Student Name</th>
-                <th>Class</th>
-                <th>Total Amount</th>
-                <th>Paid</th>
-                <th>Due</th>
-                <th>Status</th>
-                <th>Last Payment</th>
+                <th class="text-center">ID</th>
+                <th class="text-center">Student Name</th>
+                <th class="text-center">Class</th>
+                <th class="text-center">Total Amount</th>
+                <th class="text-center">Paid</th>
+                <th class="text-center">Due</th>
+                <th class="text-center">Status</th>
+                <th class="text-center">Last Payment</th>
                 <th class="text-center">Actions</th>
               </tr>
             </thead>
