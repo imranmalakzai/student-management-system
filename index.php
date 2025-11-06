@@ -143,28 +143,28 @@ require_once 'common/header.php';
                 <div class="col-md-3">
                     <div class="stat-card">
                         <i class="fa-solid fa-user-graduate fa-2x mb-2" style="color:#7D53F3;"></i>
-                        <h3>1,250</h3>
+                        <h3 id="showStudentCounts">1,250</h3>
                         <p data-translate="students">Students</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stat-card">
                         <i class="fa-solid fa-chalkboard-teacher fa-2x mb-2" style="color:#7D53F3;"></i>
-                        <h3>85</h3>
+                        <h3 id="showTeachersCounts">85</h3>
                         <p data-translate="teachers">Teachers</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stat-card">
                         <i class="fa-solid fa-money-bill-wave fa-2x mb-2" style="color:#7D53F3;"></i>
-                        <h3>95%</h3>
+                        <h3 id="feesPaid">95%</h3>
                         <p data-translate="paidFees">Fees Paid</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stat-card">
                         <i class="fa-solid fa-calendar-check fa-2x mb-2" style="color:#7D53F3;"></i>
-                        <h3>32</h3>
+                        <h3 id="classes">32</h3>
                         <p data-translate="ActiveClasses">Active Classes</p>
                     </div>
                 </div>
@@ -183,19 +183,7 @@ require_once 'common/header.php';
                                 <th><i class="fa-solid fa-map-location-dot me-1"></i> <span data-translate="action">Action</span></th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>STU-101</td>
-                                <td>Ahmad Khan</td>
-                                <td>10-A</td>
-                                <td><button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
-                            </tr>
-                            <tr>
-                                <td>STU-102</td>
-                                <td>Fatima Noori</td>
-                                <td>9-B</td>
-                                <td><button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
-                            </tr>
+                        <tbody id="studentTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -214,19 +202,7 @@ require_once 'common/header.php';
                                 <th><i class="fa-solid fa-map-location-dot me-1"></i> <span data-translate="action">Action</span></th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>TEA-45</td>
-                                <td>Mr. Hamidullah</td>
-                                <td>Mathematics</td>
-                                <td><button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
-                            </tr>
-                            <tr>
-                                <td>TEA-48</td>
-                                <td>Mrs. Zainab</td>
-                                <td>English</td>
-                                <td><button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
-                            </tr>
+                        <tbody id="teachersTableBody">
                         </tbody>
                     </table>
                 </div>
@@ -246,21 +222,7 @@ require_once 'common/header.php';
                                 <th><i class="fa-solid fa-map-location-dot me-1"></i> <span data-translate="action">Action</span></th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>STU-101</td>
-                                <td>Ahmad Khan</td>
-                                <td>$200</td>
-                                <td>2025-10-23</td>
-                                <td><button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
-                            </tr>
-                            <tr>
-                                <td>STU-102</td>
-                                <td>Fatima Noori</td>
-                                <td>$180</td>
-                                <td>2025-10-22</td>
-                                <td><button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
-                            </tr>
+                        <tbody id="fees">
                         </tbody>
                     </table>
                 </div>
@@ -316,6 +278,7 @@ require_once 'common/header.php';
 </div>
 
 <!-- Scripts -->
+<script src="js/dashboard.js"></script>
 <script src="js/chart.umd.min.js"></script>
 <script>
     const ctx2 = document.getElementById('rightChart').getContext('2d');
