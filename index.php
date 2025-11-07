@@ -106,6 +106,10 @@ require_once 'common/header.php';
     /* Right Sidebar */
     .right-sidebar {
         padding-left: 1rem;
+        position: sticky !important;
+        overflow: hidden !important;
+        top: 70px !important;
+        height: 100vh !important;
     }
 
     .right-card {
@@ -268,9 +272,6 @@ require_once 'common/header.php';
                         <small class="text-muted" data-translate="assistance">Vice Principal</small>
                     </div>
                     <button class="btn btn-outline-primary rounded-pill" data-translate="follow">Follow</button>
-                </div>
-                <div class="text-center mt-3">
-                    <button class="btn btn-purpal rounded-pill px-4 py-2" data-translate="seeAll">See All</button>
                 </div>
             </div>
         </div>
