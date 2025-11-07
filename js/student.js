@@ -12,14 +12,14 @@ const showAllRecords = async function () {
     data.forEach((student) => {
       let tr = document.createElement("tr");
       tr.innerHTML = `
-        <td>${student.student_id}</td>
-        <td>${student.first_name} ${student.last_name}</td>
-        <td>${student.father_name}</td>
-        <td>${student.gender}</td>
-        <td>${student.class_name}</td>
-        <td>${student.enrollment_date}</td>
-        <td>${student.province || "N/A"}</td>
-        <td>${student.district || "N/A"}</td>
+        <td class="text-center">${student.student_id}</td>
+        <td class="text-center">${student.first_name} ${student.last_name}</td>
+        <td class="text-center">${student.father_name}</td>
+        <td class="text-center">${student.gender}</td>
+        <td class="text-center">${student.class_name}</td>
+        <td class="text-center">${student.enrollment_date}</td>
+        <td class="text-center">${student.province || "N/A"}</td>
+        <td class="text-center">${student.district || "N/A"}</td>
         <td class="text-center">
           <button class="btn btn-sm btn-warning me-2 edit-btn" data-id="${
             student.student_id
@@ -35,7 +35,7 @@ const showAllRecords = async function () {
       `;
       tbody.appendChild(tr);
     });
-
+    SearchQuery();
     await attchBTN();
   } catch (error) {
     showError("Unable to load the records");
@@ -72,6 +72,7 @@ const deleteRecord = async function (studentId) {
 
 //========================= Update Record =========================//
 const updateRecord = async function (studentId) {
+  console.log(studentId);
   try {
     const form = new FormData(document.getElementById("addStudentForm"));
     form.append("_method", "PUT");
@@ -132,9 +133,7 @@ const attchBTN = async function () {
     document.querySelectorAll(".edit-btn").forEach((btn) => {
       btn.addEventListener("click", async function () {
         const id = btn.getAttribute("data-id");
-        let result = await singleRecord(id);
-        let data = result[0];
-
+        let data = await singleRecord(id);
         document.getElementById("first_name").value = data.first_name;
         document.getElementById("last_name").value = data.last_name;
         document.getElementById("father_name").value = data.father_name;
@@ -316,3 +315,24 @@ document.getElementById("studentSearch").addEventListener("input", function () {
     }
   });
 });
+
+const SearchQuery = function () {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    if (id) {
+      const rows = document.querySelectorAll("#studentTableBody tr");
+      rows.forEach((row) => {
+        const cell = row.querySelector("td:nth-child(1)");
+        const text = cell ? cell.innerText : "";
+        if (text === id) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
