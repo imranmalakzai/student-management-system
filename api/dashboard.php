@@ -62,7 +62,7 @@ switch ($method) {
     echo json_encode($data);
     break;
   case "RESENT_FEES":
-    $result = $conn->query("SELECT first_name,last_name,last_payment_date,amount_paid, fees.student_id FROM fees INNER JOIN students ON students.student_id = fees.student_id ORDER BY fees.student_id DESC limit 2");
+    $result = $conn->query("SELECT first_name,last_name,last_payment_date,amount_paid, fees.student_id,fees.fee_id FROM fees INNER JOIN students ON students.student_id = fees.student_id ORDER BY fees.student_id DESC limit 2");
     $data = $result->fetch_all(MYSQLI_ASSOC);
     echo json_encode($data);
 }
