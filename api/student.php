@@ -30,8 +30,8 @@ switch ($method) {
             LEFT JOIN district d ON s.district_id = d.district_id
         ";
 
-    if (isset($_GET['student_id'])) {
-      $id = intval($_GET['student_id']);
+    if (isset($_GET['id'])) {
+      $id = intval($_GET['id']);
       $query .= " WHERE s.student_id = $id";
       $result = $conn->query($query);
       if ($result->num_rows > 0) {
