@@ -54,7 +54,7 @@ require "common/header.php" ?>
                 <th class="text-center" data-translate="action">Actions</th>
               </tr>
             </thead>
-            <tbody id="studentTableBody">
+            <tbody id="studentTableBody" class="tbody">
 
             </tbody>
           </table>
@@ -106,8 +106,8 @@ require "common/header.php" ?>
             <div class="col-md-6">
               <label class="form-label">District</label>
               <select id="district_id" name="district_id" class="form-select" required>
-                <!-- <option value="">Select District</option>
-                <option value="1">Nimrooz</option>
+                <option value="">Select Province First</option>
+                <!-- <option value="1">Nimrooz</option>
                 <option value="2">Hira</option>
                 <option value="3">Wila</option> -->
                 <!-- Dynamic options -->
