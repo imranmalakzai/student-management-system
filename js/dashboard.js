@@ -77,9 +77,16 @@ const resentStudents = async function () {
         <td>STU-${row.student_id}</td>
         <td>${row.first_name} ${row.last_name}</td>
         <td>${row.class_name}</td>
-        <td><button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
+        <td><button class="btn btn-sm btn-outline-primary std-view" data-id=${row.student_id}><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
       `;
       tbody.appendChild(tr);
+    });
+
+    document.querySelectorAll(".std-view").forEach((button) => {
+      button.addEventListener("click", async function () {
+        const id = button.getAttribute("data-id");
+        window.location.href = `students.php?id=${id}`;
+      });
     });
   } catch (error) {
     console.log(error);
@@ -103,9 +110,15 @@ const resentTeachers = async function () {
         <td>TEA-${row.teacher_id}</td>
         <td>${row.first_name} ${row.last_name}</td>
         <td>${row.subject}</td>
-        <td><button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
+        <td><button data-id=${row.teacher_id} class="btn btn-sm btn-outline-primary tech-view"><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
       `;
       tbody.appendChild(tr);
+    });
+    document.querySelectorAll(".tech-view").forEach((button) => {
+      button.addEventListener("click", async function () {
+        const id = button.getAttribute("data-id");
+        window.location.href = `teachers.php?id=${id}`;
+      });
     });
   } catch (error) {
     console.log(error);
@@ -124,21 +137,27 @@ const resentFeesPaid = async function () {
     const data = await res.json();
     const tbody = document.getElementById("fees");
     data.forEach((row) => {
-      console.log(row);
       let tr = document.createElement("tr");
       tr.innerHTML += `
         <td>STU-${row.student_id}</td>
         <td>${row.first_name} ${row.last_name}</td>
         <td>$${row.amount_paid}</td>
         <td>${row.last_payment_date}</td>
-        <td><button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
+        <td><button data-id=${row.fee_id} class="btn btn-sm btn-outline-primary fee-view"><i class="fa-solid fa-eye"></i><span data-translate="view"> View </span></button></td>
       `;
       tbody.append(tr);
+    });
+    document.querySelectorAll(".fee-view").forEach((button) => {
+      button.addEventListener("click", async function () {
+        const id = button.getAttribute("data-id");
+        window.location.href = `fees.php?id=${id}`;
+      });
     });
   } catch (error) {
     console.log(error);
   }
 };
+
 resentFeesPaid();
 resentTeachers();
 resentStudents();
