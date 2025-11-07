@@ -32,6 +32,7 @@ const showAllRecords = async function () {
       `;
       tbody.appendChild(row);
     });
+    SearchQuery();
     await atachBTN();
   } catch (error) {
     showError("Error inside the show all records funtions");
@@ -290,3 +291,25 @@ document.getElementById("searchTeacher").addEventListener("input", function () {
     }
   });
 });
+
+//=================== Search query ========================//
+const SearchQuery = function () {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    if (id) {
+      const rows = document.querySelectorAll("#teachersTableBody tr");
+      rows.forEach((row) => {
+        const cell = row.querySelector("td:nth-child(1)");
+        const text = cell ? cell.innerText : "";
+        if (text === id) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
