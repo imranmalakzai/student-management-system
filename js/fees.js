@@ -32,6 +32,7 @@ const showAllRecords = async function () {
       `;
       tbody.appendChild(tr);
     });
+    SearchQuery();
     await attachButtons();
   } catch (error) {
     showError("Unable to show All Records");
@@ -243,6 +244,27 @@ const checker = function (status) {
     return "unpaid";
   } else {
     return "partial";
+  }
+};
+//================= Search query ================//
+const SearchQuery = function () {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    if (id) {
+      const rows = document.querySelectorAll("#feesTablebody tr");
+      rows.forEach((row) => {
+        const cell = row.querySelector("td:nth-child(1)");
+        const text = cell ? cell.innerText : "";
+        if (text === id) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    }
+  } catch (error) {
+    console.log(error);
   }
 };
 
