@@ -64,7 +64,7 @@ require("common/header.php") ?>
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content shadow-lg">
       <div class="modal-header bg-purpal text-white">
-        <h5 class="modal-title" id="addProvinceModalLabel"><i class="fa-solid fa-plus-circle me-2"></i>Add New Province</h5>
+        <h5 class="modal-title"><i class="fa-solid fa-plus-circle me-2"></i><span id="addProvinceModalLabel">Add New Province</span></h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form id="addProvinceForm">
