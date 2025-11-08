@@ -17,7 +17,7 @@ switch ($method) {
       $gender = $result->fetch_assoc();
       echo json_encode($gender ? $gender : ["message" => "Record not found"]);
     } else {
-      $query = "SELECT * FROM genders";
+      $query = "SELECT * FROM genders ORDER BY gender_id";
       $result = $conn->query($query);
       $genders = $result->fetch_all(MYSQLI_ASSOC);
       echo json_encode($genders ? $genders : ["message" => "Record not found"]);
