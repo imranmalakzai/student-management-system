@@ -121,7 +121,7 @@ const attachBTN = async function () {
         document.getElementById("genderName").value = data.name;
         isEditing = true;
         modal.querySelector("#addGenderModalLabel").textContent =
-          "Update Record";
+          "Update gender ";
         // modal
         //   .querySelector("button type=['submit']")
         //   .setAttribute("data-id", id);
