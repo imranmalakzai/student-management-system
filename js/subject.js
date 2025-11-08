@@ -11,8 +11,8 @@ const showAllRecords = async function () {
     data.forEach((subject) => {
       let row = document.createElement("tr");
       row.innerHTML = `
-      <th scope="row">${subject.subject_id}</th>
-       <td>${subject.name}</td>
+      <th  class="text-center" scope="row">${subject.subject_id}</th>
+       <td class="text-center">${subject.name}</td>
        <td class="text-center">
          <button class="btn btn-sm btn-warning me-2 edit-btn" data-id="${subject.subject_id}">
            <i class="fa-solid fa-pen-to-square"></i>

@@ -11,9 +11,9 @@ const showAllRecords = async function () {
     data.forEach((district) => {
       let row = document.createElement("tr");
       row.innerHTML = `   
-        <th>${district.district_id}</th>
-        <td>${district.name}</td>
-        <td>${district.province_name || "N/A"}</td>
+        <th class="text-center">${district.district_id}</th>
+        <td class="text-center">${district.name}</td>
+        <td class="text-center">${district.province_name || "N/A"}</td>
         <td class="text-center">
           <button class="btn btn-sm btn-warning me-2 shadow-sm edit-btn" data-id="${
             district.district_id

@@ -44,8 +44,8 @@ require("common/header.php") ?>
           <table class="table table-hover align-middle">
             <thead class="table-primary">
               <tr>
-                <th data-translate="id-number">ID</th>
-                <th data-translate="province-name">Province Name</th>
+                <th class="text-center" data-translate="id-number">ID</th>
+                <th class="text-center" data-translate="province-name">Province Name</th>
                 <th data-translate="action" class="text-center">Actions</th>
               </tr>
             </thead>

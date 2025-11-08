@@ -11,8 +11,8 @@ const showAllrecords = async function () {
     data.forEach((gender) => {
       let row = document.createElement("tr");
       row.innerHTML = `
-        <th>${gender.gender_id}</th>
-        <td>${gender.name}</td>
+        <th class="text-center">${gender.gender_id}</th>
+        <td class="text-center">${gender.name}</td>
         <td class="text-center">
             <button class="btn btn-sm btn-warning me-2 edit-btn" data-id="${gender.gender_id}">
                 <i class="fa-solid fa-pen-to-square"></i>

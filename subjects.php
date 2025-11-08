@@ -50,8 +50,8 @@ require("common/header.php") ?>
           <table class="table table-hover align-middle" id="subjectTable">
             <thead class="table-primary">
               <tr>
-                <th scope="col"><span data-translate="id-number">ID</span></th>
-                <th scope="col"><i class="fa-solid fa-book-open me-1"></i><span data-translate="subject">Subject Name</span></th>
+                <th class="text-center" scope="col"><span data-translate="id-number">ID</span></th>
+                <th class="text-center" scope="col"><i class="fa-solid fa-book-open me-1"></i><span data-translate="subject">Subject Name</span></th>
                 <th scope="col" class="text-center"><i class="fa-solid fa-gear me-1"></i> <span data-translate="action">Actions</span></th>
               </tr>
             </thead>
