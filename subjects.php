@@ -93,7 +93,7 @@ require("common/header.php") ?>
   <div class="modal-dialog">
     <div class="modal-content shadow">
       <div class="modal-header bg-purpal text-white">
-        <h5 class="modal-title" id="addSubjectLabel"><i class="fa-solid fa-plus me-2"></i> Add New Subject</h5>
+        <h5 class="modal-title"><i class="fa-solid fa-book me-2"></i> <span id="addSubjectLabel">Add New Subject</span></h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
 
