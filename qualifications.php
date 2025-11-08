@@ -6,7 +6,7 @@ require("common/header.php") ?>
   <div class="row mb-4 align-items-center">
     <div class="col-md-6">
       <h2 class="text-purpal fw-bold">
-        <i class="fas fa-graduation-cap me-2"></i></i> <span data-translate="qualifications">Qualifications</span>
+        <i class="fas fa-graduation-cap me-2"></i> <span data-translate="qualifications">Qualifications</span>
       </h2>
     </div>
     <div class="col-md-6 text-md-end text-center mt-3 mt-md-0">
@@ -63,7 +63,11 @@ require("common/header.php") ?>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header bg-purpal text-white">
-        <h5 class="modal-title" id="addQualificationLabel">Add New Qualification</h5>
+        <h5 class="modal-title"><i class="fas fa-graduation-cap me-2"></i>
+          <span id="addQualificationLabel">
+            Add New Qualification
+          </span>
+        </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form id="addQualificationsForm">
