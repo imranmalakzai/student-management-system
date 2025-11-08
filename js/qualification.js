@@ -11,8 +11,8 @@ const showAllRecords = async function () {
     data.forEach((qualification) => {
       let row = document.createElement("tr");
       row.innerHTML = `
-      <th scope="row">${qualification.qualification_id}</th>
-        <td>${qualification.name}</td>
+      <th class="text-center" scope="row">${qualification.qualification_id}</th>
+        <td class="text-center">${qualification.name}</td>
         <td class="text-center">
           <button class="btn btn-sm btn-warning me-2 shadow-sm edit-btn" data-id="${qualification.qualification_id}"><i class="fa-solid fa-pen-to-square"></i></button>
           <button class="btn btn-sm btn-danger shadow-sm delete-btn" data-id="${qualification.qualification_id}"><i class="fa-solid fa-trash"></i></button>

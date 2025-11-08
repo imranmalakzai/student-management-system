@@ -11,16 +11,16 @@ const showAllRecords = async function () {
     data.forEach((teacher) => {
       let row = document.createElement("tr");
       row.innerHTML = `
-      <td>${teacher.teacher_id}</td>
-      <td>${teacher.first_name} ${teacher.last_name}</td>
-      <td>${teacher.date_of_birth}</td>
-      <td>${teacher.contact_number}</td>
-      <td>${teacher.email}</td>
-      <td>${teacher.hire_date}</td>
-      <td>${teacher.status}</td>
-      <td>${teacher.gender}</td>
-      <td>${teacher.qualification}</td>
-      <td>${teacher.subject}</td>
+      <td class="text-center">${teacher.teacher_id}</td>
+      <td class="text-center">${teacher.first_name} ${teacher.last_name}</td>
+      <td class="text-center">${teacher.date_of_birth}</td>
+      <td class="text-center">${teacher.contact_number}</td>
+      <td class="text-center">${teacher.email}</td>
+      <td class="text-center">${teacher.hire_date}</td>
+      <td class="text-center">${teacher.status}</td>
+      <td class="text-center">${teacher.gender}</td>
+      <td class="text-center">${teacher.qualification}</td>
+      <td class="text-center">${teacher.subject}</td>
       <td class="text-center">
         <button class="btn btn-sm btn-warning me-2 edit-btn" data-id="${teacher.teacher_id}">
           <i class="fa-solid fa-pen-to-square"></i>
@@ -143,7 +143,7 @@ const atachBTN = async function () {
         document.getElementById("subject_id").value = data.subject_id;
         isEditing = true;
         modal.querySelector("#addTeacherModalLabel").textContent =
-          "Update Teacher";
+          "Update Teacher ";
         // modal
         //   .querySelector("button[type='submit']")
         //   .setAttribute("data-id", id);

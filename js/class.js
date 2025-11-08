@@ -12,9 +12,9 @@ const showAllRecords = async function () {
     data.forEach((c) => {
       let row = document.createElement("tr");
       row.innerHTML = `
-        <th scope="row">${c.class_id}</th>
-        <td>${c.class_name}</td>
-        <td>${c.teacher_name || "—"}</td>
+        <th class="text-center" scope="row">${c.class_id}</th>
+        <td class="text-center">${c.class_name}</td>
+        <td class="text-center">${c.teacher_name || "—"}</td>
         <td class="text-center">
           <button class="btn btn-sm btn-warning me-2 edit-btn" data-id="${
             c.class_id

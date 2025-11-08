@@ -43,10 +43,10 @@ require("common/header.php") ?>
           <table class="table table-hover align-middle">
             <thead class="table-primary">
               <tr>
-                <th data-translate="id-number">ID</th>
-                <th data-translate="class-name">Class Name</th>
-                <th data-translate="teacher">Teacher</th>
-                <th data-translate="action" class="text-center">Actions</th>
+                <th class="text-center" data-translate="id-number">ID</th>
+                <th class="text-center" data-translate="class-name">Class Name</th>
+                <th class="text-center" data-translate="teacher">Teacher</th>
+                <th class="text-center" data-translate="action" class="text-center">Actions</th>
               </tr>
             </thead>
             <tbody id="tablebody"></tbody>

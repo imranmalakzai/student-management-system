@@ -11,7 +11,7 @@ const showAllRecords = async function () {
     data.forEach((district) => {
       let row = document.createElement("tr");
       row.innerHTML = `   
-        <td>${district.district_id}</td>
+        <th>${district.district_id}</th>
         <td>${district.name}</td>
         <td>${district.province_name || "N/A"}</td>
         <td class="text-center">
