@@ -227,3 +227,10 @@ document.getElementById("searchClass").addEventListener("input", (e) => {
     }
   });
 });
+
+//============= Reset form and state when modal is closed (via X or Cancel button) =========//
+modal.addEventListener("hidden.bs.modal", () => {
+  document.getElementById("addClassForm").reset();
+  modal.querySelector("#addClassModalLabel").textContent = "Add New Class";
+  isEditing = false;
+});
