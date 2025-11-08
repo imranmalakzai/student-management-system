@@ -68,8 +68,8 @@ require("common/header.php") ?>
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content shadow-lg border-0">
       <div class="modal-header bg-purpal text-white">
-        <h5 class="modal-title" id="addDistrictModalLabel">
-          <i class="fa-solid fa-location-dot me-2"></i> Add New District
+        <h5 class="modal-title">
+          <i class="fa-solid fa-location-dot me-2"></i> <span id="addDistrictModalLabel">Add New District</span>
         </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
