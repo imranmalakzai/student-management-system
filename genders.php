@@ -41,9 +41,9 @@ require("common/header.php") ?>
           <table id="genderTable" class="table table-hover align-middle">
             <thead class="table-primary">
               <tr>
-                <th data-translate="id-number">ID</th>
-                <th data-translate="gender">Gender Name</th>
-                <th data-translate="action" class="text-center">Actions</th>
+                <th class="text-center" data-translate="id-number">ID</th>
+                <th class="text-center" data-translate="gender">Gender Name</th>
+                <th class="text-center" data-translate="action">Actions</th>
               </tr>
             </thead>
             <tbody id="gendersTableBody">
@@ -62,7 +62,7 @@ require("common/header.php") ?>
     <div class="modal-content shadow-lg border-0">
       <div class="modal-header bg-purpal text-white">
         <h5 class="modal-title">
-          <i class="fa-solid fa-venus-mars me-2"></i> <span id="addGenderModalLabel">Add New Gender</span>
+          <i class="fa-solid fa-venus-mars me-2"></i> <span id="addGenderModalLabel" class="text-center">Add New Gender</span>
         </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
