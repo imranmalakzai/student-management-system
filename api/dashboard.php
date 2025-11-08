@@ -22,7 +22,7 @@ switch ($method) {
     break;
   case "FEES_PAID":
     $result_students  = $conn->query("SELECT COUNT(*) AS total FROM students");
-    $result_fees = $conn->query("SELECT COUNT(*) AS total FROM fees");
+    $result_fees = $conn->query("SELECT COUNT(*) FROM fees AS total WHERE payment_status = 'paid'");
     $total_fees = $result_fees->fetch_assoc();
     $total_students = $result_students->fetch_assoc();
     $fees = intval($total_fees['total']);
