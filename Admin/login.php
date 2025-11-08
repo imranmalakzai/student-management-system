@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carpet Me - Login</title>
   <link rel="stylesheet" href="../css/bootsrap.css">
+  <link rel="stylesheet" href="../css/all.css">
   <style>
     /* ===== Body Background ===== */
     body {
@@ -125,6 +126,13 @@
       font-style: italic;
     }
 
+    .eye {
+      position: absolute;
+      top: 45px;
+      right: 50px;
+      cursor: pointer;
+    }
+
     .forgot-password:hover {
       text-decoration: underline;
     }
@@ -163,12 +171,13 @@
       <form id="loginForm">
         <div class="mb-3">
           <label class="form-label">Email Address</label>
-          <input type="email" name="username" class="hex-input" placeholder="youremail@gmail.com">
+          <input type="email" autocomplete="username" name="username" class="hex-input" placeholder="youremail@gmail.com">
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 position-relative">
           <label class="form-label">Password</label>
-          <input type="password" name="password" class="hex-input" placeholder="Enter your password">
+          <input type="password" autocomplete="current-password" name="password" class="hex-input" placeholder="Enter your password">
+          <i class="fa fa-eye-slash eye" hidden></i>
         </div>
 
         <div class="d-flex justify-content-between align-items-center mb-4">

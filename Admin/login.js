@@ -32,3 +32,28 @@ form.addEventListener("submit", async function (event) {
     showError("An error occurred. Please try again.");
   }
 });
+
+//======================= Eye Icons for showing and hiding the password =========================//
+const password = document.querySelector("[type = 'password']");
+const eye = document.querySelector(".eye");
+
+password.addEventListener("input", function () {
+  try {
+    if (this.value.trim()) {
+      eye.removeAttribute("hidden");
+      eye.addEventListener("click", () => {
+        if (password.type === "password") {
+          password.type = "text";
+          eye.classList.remove("fa-eye");
+          eye.classList.add("fa-eye-slash");
+        } else {
+          password.type = "password";
+          eye.classList.remove("fa-eye-slash");
+          eye.classList.add("fa-eye");
+        }
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+});
