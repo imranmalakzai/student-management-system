@@ -69,8 +69,8 @@ require("common/header.php");
   <div class="modal-dialog modal-md modal-dialog-centered">
     <div class="modal-content border-0 shadow-lg rounded-4">
       <div class="modal-header bg-purpal text-white">
-        <h5 class="modal-title" id="addFeeModalLabel">
-          <i class="fa-solid fa-circle-plus me-2"></i> <span id="feesLableText">Add / Update Fee</span>
+        <h5 class="modal-title">
+          <i class="fa-solid fa-money-bill-wave me-2"></i> <span id="addFeeModalLabel">Add New Fees</span>
         </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
