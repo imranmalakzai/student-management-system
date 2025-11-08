@@ -131,7 +131,6 @@ const attachButtons = async function () {
       button.addEventListener("click", async function () {
         const id = button.getAttribute("data-id");
         const data = await singleRecord(id);
-        console.log(data);
         isEditing = true;
         document.getElementById("class_id").value = data.class_id;
         document.getElementById("total_amount").value = data.total_amount;
@@ -142,7 +141,7 @@ const attachButtons = async function () {
         document.getElementById("last_payment_date").value =
           data.last_payment_date;
         document.getElementById("notes").value = data.notes;
-        document.getElementById("feesLableText").innerText =
+        document.getElementById("addFeeModalLabel").innerText =
           "update Fess Record";
         new bootstrap.Modal(modal).show();
         document.getElementById("addFeeForm").setAttribute("date-id", id);
