@@ -143,7 +143,7 @@ const atachBTN = async function () {
         document.getElementById("subject_id").value = data.subject_id;
         isEditing = true;
         modal.querySelector("#addTeacherModalLabel").textContent =
-          "Update Teacher Record";
+          "Update Teacher";
         // modal
         //   .querySelector("button[type='submit']")
         //   .setAttribute("data-id", id);

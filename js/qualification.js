@@ -120,7 +120,7 @@ const attachBTN = async function () {
         document.getElementById("qualificationName").value = data.name;
         isEditing = true;
         modal.querySelector("#addQualificationLabel").textContent =
-          "Update The Record";
+          "Update Qualifications";
         const form = document.getElementById("addQualificationsForm");
         form.setAttribute("data-id", id);
         new bootstrap.Modal(modal).show();
