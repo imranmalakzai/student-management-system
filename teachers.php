@@ -85,8 +85,8 @@ require("common/header.php") ?>
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content border-0 shadow-lg rounded-4">
       <div class="modal-header bg-purpal text-white">
-        <h5 class="modal-title" id="addTeacherModalLabel">
-          <i class="fa-solid fa-user-plus me-2"></i> Add New Teacher
+        <h5 class="modal-title">
+          <i class="fa-solid fa-chalkboard-teacher me-2"></i> <span id="addTeacherModalLabel">Add New Teacher</span>
         </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
