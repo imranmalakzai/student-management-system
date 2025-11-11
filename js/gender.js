@@ -200,3 +200,10 @@ document.getElementById("searchGenders").addEventListener("input", function () {
     }
   });
 });
+
+//============= Reset form and state when modal is closed (via X or Cancel button) =========//
+modal.addEventListener("hidden.bs.modal", () => {
+  document.getElementById("addGenderForm").reset();
+  modal.querySelector("#addGenderModalLabel").textContent = "Add New Gender";
+  isEditing = false;
+});
