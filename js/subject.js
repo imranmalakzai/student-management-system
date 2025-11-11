@@ -212,3 +212,10 @@ document.getElementById("searchSubject").addEventListener("input", function () {
     }
   });
 });
+
+//============= Reset form and state when modal is closed (via X or Cancel button) =========//
+modal.addEventListener("hidden.bs.modal", () => {
+  document.getElementById("addSubjectForm").reset();
+  modal.querySelector("#addSubjectLabel").textContent = "Add New Subject";
+  isEditing = false;
+});
