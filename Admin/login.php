@@ -164,7 +164,7 @@
     <div class="login-right">
       <div class="text-start mb-4">
         <small class="text-muted" style="font-style: italic;">VICTOR</small>
-        <h2>Welcome to Victor Me,</h2>
+        <h2>Welcom Admin Login,</h2>
         <p class="mb-4" style="font-style: italic;">Please Log in to your account.</p>
       </div>
 
