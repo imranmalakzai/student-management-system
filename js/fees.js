@@ -267,5 +267,12 @@ const SearchQuery = function () {
   }
 };
 
+//============= Reset form and state when modal is closed (via X or Cancel button) =========//
+modal.addEventListener("hidden.bs.modal", () => {
+  document.getElementById("addFeeForm").reset();
+  modal.querySelector("#addFeeModalLabel").textContent = "Add New Fees";
+  isEditing = false;
+});
+
 loadClasses();
 showAllRecords();
