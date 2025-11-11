@@ -336,3 +336,10 @@ const SearchQuery = function () {
     console.log(error);
   }
 };
+
+//============= Reset form and state when modal is closed (via X or Cancel button) =========//
+modal.addEventListener("hidden.bs.modal", () => {
+  document.getElementById("addStudentForm").reset();
+  modal.querySelector("#addStudentModalLabel").textContent = "Add New Students";
+  isEditing = false;
+});
