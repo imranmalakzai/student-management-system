@@ -197,3 +197,10 @@ document
       }
     });
   });
+//============= Reset form and state when modal is closed (via X or Cancel button) =========//
+modal.addEventListener("hidden.bs.modal", () => {
+  document.getElementById("addQualificationsForm").reset();
+  modal.querySelector("#addQualificationLabel").textContent =
+    "Add New Qualifications";
+  isEditing = false;
+});
