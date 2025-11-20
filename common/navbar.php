@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-custom ">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
+  <div class="container d-flex justify-content-between align-items-center my-nav  ">
 
     <!-- Search box -->
-    <form class="search-box">
+    <form class="search-box  col-md-6 d-md-block d-none">
       <i class="fa fa-search"></i>
       <input type="search" placeholder="Search your content..." aria-label="Search">
 
@@ -52,7 +52,6 @@
   }
 
   .search-box {
-    min-width: 70%;
     display: flex;
     align-items: center;
     background-color: #ffffff;
@@ -156,6 +155,12 @@
 
   nav {
     margin-left: 264px;
+  }
+
+  @media (max-width: 968px) {
+    nav {
+      margin-left: 100px;
+    }
   }
 </style>
 

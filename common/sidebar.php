@@ -5,7 +5,7 @@
       <img src="assets/img/logo2.png" width="60px" alt="Logo">
       <span class="title">VICTOR</span>
     </div>
-    <i class="fa-solid fa-circle-chevron-left"></i>
+    <i class="fa-solid toggler fa-circle-chevron-left"></i>
   </div>
 
   <ul class="nav flex-column">
@@ -191,15 +191,32 @@
     color: #7D53F3;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 968px) {
+    ul li span {
+      display: none;
+    }
+
     .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
+      width: 90px;
+    }
+
+    .nav-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .main-content {
-      margin-left: 0;
+      margin-left: 80px;
+      padding: 20px;
+    }
+
+    .title {
+      display: none;
+    }
+
+    .toggler {
+      display: none;
     }
   }
 </style>
