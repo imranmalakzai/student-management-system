@@ -1,19 +1,19 @@
-# 📘 **Student Management Dashboard**
+#  **Student Management Dashboard**
 
 A complete and fully modular **Student Management Dashboard** built with **PHP, MySQL, Bootstrap 5, JavaScript, and AJAX**, designed for managing school data with modern UI, advanced reporting tools, automated backups, and multi-language support.
 
 ---
 
-## 🚀 **Features**
+##  **Features**
 
-### 🔐 **1. Secure Admin Login**
+###  **1. Secure Admin Login**
 
 - Password encrypted in database
 - PHP sessions
 - Auto-redirect protection
 - Logout confirmation with SweetAlert2
 
-### 📊 **2. Modern Dashboard**
+###  **2. Modern Dashboard**
 
 Includes:
 
@@ -28,7 +28,7 @@ Includes:
 - Fee collection chart
 - Real-time statistics using **Chart.js**
 
-### 🧩 **3. Fully Modular Architecture**
+###  **3. Fully Modular Architecture**
 
 Each module has:
 
@@ -51,19 +51,19 @@ Modules included:
   -Qualifications
 - Genders
 
-### 🗂 **4. Backup & Restore System**
+###  **4. Backup & Restore System**
 
 - Create SQL backup (auto timestamped)
 - Download backup file
 - Restore backup from uploaded SQL
 - Backup folder auto-organized
 
-### 🌙 **5. Light / Dark Theme**
+###  **5. Light / Dark Theme**
 
 - Theme preference saved in localStorage
 - Smooth UI switch
 
-### 🌍 **6. Multi-Language Support**
+###  **6. Multi-Language Support**
 
 Languages included:
 
@@ -72,18 +72,18 @@ Languages included:
 
 Dynamic translation using JSON + JavaScript.
 
-### 📄 **7. Export Tools**
+###  **7. Export Tools**
 
 - PDF export using **jsPDF + html2canvas**
 - CSV export for every table
 
-### 🔎 **8. Client-side Search**
+###  **8. Client-side Search**
 
 Instant search for all modules with clean highlighting.
 
 ---
 
-## 🏗 **Technology Stack**
+## 🏗**Technology Stack**
 
 | Layer          | Technology                     |
 | -------------- | ------------------------------ |
@@ -99,7 +99,7 @@ Instant search for all modules with clean highlighting.
 
 ---
 
-## 📁 **Project Directory Structure**
+##  **Project Directory Structure**
 
 ```
 dashboard/
@@ -137,12 +137,18 @@ Each directory contains dedicated and modular components for scalability and eas
    ```
    config/db.php
    ```
+3. Default username and password
+   
+   ```
+   username : admin@gmail.com
+   password : admin123
+   ```
 
 After that, login with your created admin credentials.
 
 ---
 
-## 🔧 **Installation & Deployment**
+##  **Installation & Deployment**
 
 ### **1. Requirements**
 
@@ -155,8 +161,8 @@ After that, login with your created admin credentials.
 ### **2. Installation Steps**
 
 ```
-git clone <your-repo-url>
-cd dashboard/
+git clone https://github.com/imranmalakzai/student-management-system
+cd student-management-system
 ```
 
 - Import database
@@ -165,7 +171,7 @@ cd dashboard/
 
 ---
 
-## 📊 **Dashboard Preview**
+##  **Dashboard Preview**
 
 (You can add screenshots here)
 
